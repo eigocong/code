@@ -1,0 +1,36 @@
+#ballot {
+    Width: 400px;
+    Height: 400px;
+    position: absolute;
+    left: 50%;
+    Bottom: 0px;
+    transform: translateX(-50%);
+}
+
+#votes {
+    position: absolute;
+    left:50%;
+    top:-100px;
+    transform: translateX(-50%);
+}
+
+#line {
+    background-color: black;
+    width: 1900px;
+    Height: 20px;
+    position: absolute;
+    left:50%;
+    bottom: 50px;
+    transform: translateX(-50%);
+    
+}
+
+#circle {
+    background-color: black;
+    width: 40px;
+    Height: 40px;
+    position: absolute;
+    left: -10px;
+    bottom: -10px;
+    border-radius: 50%;
+}

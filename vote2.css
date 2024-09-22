@@ -1,0 +1,51 @@
+#b1 {
+    width: 800px;
+    position: absolute;
+    left: 50%;
+    Bottom: 0px;
+    transform: translateX(-50%);
+}
+
+#b2 {
+    Width: 780px;
+    position: absolute;
+    left: 49.5%;
+    Bottom: 170px;
+    transform: translateX(-50%);
+}
+
+#flag {
+    width:650px;
+    height:650px;
+    position: absolute;
+    left:50%;
+    top:-100px;
+    transform: translateX(-50%);
+}
+
+#sign {
+    width:80px;
+    position: absolute;
+    right: 50px;
+    top:50px;
+}
+
+#line {
+    background-color: #a1a1a1;
+    width: 10px;
+    Height: 1050px;
+    position: absolute;
+    left:50px;
+    bottom: 50px;
+    
+}
+
+#circle {
+    background-color: #a1a1a1;
+    width: 20px;
+    Height: 20px;
+    position: absolute;
+    left: -5px;
+    bottom: -10px;
+    border-radius: 50%;
+}
