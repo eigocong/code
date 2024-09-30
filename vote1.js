@@ -21,3 +21,80 @@ document.onmousemove = function(e) {
 function mapRange(value, inMin, inMax, outMin, outMax) {
     return ((value - inMin) * (outMax - outMin)) / (inMax - inMin) + outMin;
 }
+
+
+let wiggleShader;
+
+let vertSrc = `
+precision highp float;
+
+attribute vec3 aPosition;
+attribute vec4 aVertexColor;
+
+uniform mat4 uModelViewMatrix;
+uniform mat4 uProjectionMatrix;
+
+varying vec4 vVertexColor;
+
+uniform float time;
+
+void main() {
+  vec3 position = aPosition;
+  position.y += 5.0 * sin(time * 0.004 + position.y * 0.05);
+  vec4 viewModelPosition = uModelViewMatrix * vec4(position, 1.0);
+  gl_Position = uProjectionMatrix * viewModelPosition;  
+  vVertexColor = aVertexColor;
+}
+`;
+
+let fragSrc = `
+precision highp float;
+varying vec4 vVertexColor;
+
+void main() {
+  gl_FragColor = vVertexColor;
+}
+`;
+
+let ribbon;
+function setup() {
+  let cnv = createCanvas(100, 100, WEBGL);
+  cnv.id('myCanvas');
+  wiggleShader = createShader(vertSrc, fragSrc);
+
+  let startColor = color('#F55');
+  let endColor = color('#55F');
+  ribbon = buildGeometry(() => {
+    noStroke();
+
+
+    beginShape(QUAD_STRIP);
+    let numPoints = 50;
+    for (let currentPoint = 0; currentPoint < numPoints; currentPoint++) {
+      let x = map(currentPoint, 0, numPoints - 1, -width / 2, width / 4);
+      let y = map(currentPoint, 0, numPoints - 1, -height / 6, height / 6);
+
+
+      fill(lerpColor(startColor, endColor, currentPoint / (numPoints - 1)));
+      for (let z of [-50, 50]) {
+        vertex(x, y, z);
+      }
+    }
+    endShape();
+  });
+
+}
+
+function draw() {
+  background(255);
+  noStroke();
+
+  rotateX(PI * 0.18);
+
+  shader(wiggleShader);
+
+
+  wiggleShader.setUniform('time', millis());
+
+  model(ribbon);
+}
