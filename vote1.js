@@ -64,6 +64,7 @@ function setup() {
 
   let startColor = color('#F55');
   let endColor = color('#55F');
+
   ribbon = buildGeometry(() => {
     noStroke();
 
@@ -82,6 +83,7 @@ function setup() {
     }
     endShape();
   });
+  
 
 }
 
@@ -89,7 +91,7 @@ function draw() {
   background(255);
   noStroke();
 
-  rotateX(PI * 0.18);
+  rotateX(PI * 0.15);
 
   shader(wiggleShader);
 
@@ -98,3 +100,20 @@ function draw() {
 
   model(ribbon);
 }
+
+
+const stickyDiv = document.getElementById('circles');
+
+    window.addEventListener('scroll', () => {
+      const scrollPosition = window.scrollY;
+
+      // Change color when the scroll position reaches 2000px
+      if (scrollPosition >= 5100) {
+        stickyDiv.style.backgroundColor = 'rgb(0, 47, 255)';
+      } else {
+        stickyDiv.style.backgroundColor = 'rgb(219, 219, 219)';
+      }
+      if (scrollPosition >= 7100) {
+        stickyDiv.style.backgroundColor = 'rgb(255, 0, 0)';
+      }
+    });

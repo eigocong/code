@@ -13,7 +13,7 @@
     height:680px;
     position: absolute;
     left: 50.1%;
-    Bottom: -100px;
+    Bottom: -105px;
     transform: translateX(-50%);
     background-color: rgb(255, 255, 255);
     z-index:1;
@@ -27,6 +27,7 @@
     margin-left:1450px;
     margin-bottom:-50px;
     rotate: 5deg;
+    transform: skew(3deg,3deg);
 }
 
 #b1 {
@@ -50,7 +51,7 @@
 #line {
     width: 10px;
     height: 7280px;
-    background-color:rgb(200, 200, 200);
+    background-color:rgb(219, 219, 219);
     position:absolute;
     left:450px;
     top:1400px;
@@ -152,7 +153,7 @@
     width: 30px;
     height: 30px;
     border-radius: 100%;
-    background-color:rgb(200, 200, 200);
+    background-color:rgb(219, 219, 219);
     position:sticky;
     top:400px;
     margin-left:410px;
@@ -256,3 +257,121 @@
     transform: translateX(-50%);
 }
 
+#mov1 {
+    position: absolute;
+    left: 800px;
+    top:850px;
+    outline: none;
+    clip-path: inset(1px);
+    pointer-events: none;
+    z-index:1;
+}
+
+#mov2 {
+    position: absolute;
+    left: 900px;
+    top:600px;
+    outline: none;
+    clip-path: inset(1px);
+    pointer-events: none;
+    z-index:1;
+    rotate: 40deg;
+}
+
+#mov3 {
+    position: absolute;
+    left: 750px;
+    top:590px;
+    outline: none;
+    clip-path: inset(1px);
+    pointer-events: none;
+    z-index:1;
+    rotate: 20deg;
+}
+
+#mov4 {
+    position: absolute;
+    left: 850px;
+    top:740px;
+    outline: none;
+    clip-path: inset(1px);
+    pointer-events: none;
+    z-index:1;
+    rotate: 20deg;
+}
+
+#mov5 {
+    position: absolute;
+    left: 930px;
+    top:850px;
+    outline: none;
+    clip-path: inset(1px);
+    pointer-events: none;
+    z-index:1;
+    rotate: 20deg;
+}
+
+#mov6 {
+    position: absolute;
+    left: 1100px;
+    top:550px;
+    outline: none;
+    clip-path: inset(1px);
+    pointer-events: none;
+    z-index:1;
+    rotate: -30deg;
+    -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+#mov7 {
+    position: absolute;
+    left: 1250px;
+    top:600px;
+    outline: none;
+    clip-path: inset(1px);
+    pointer-events: none;
+    z-index:1;
+    rotate: -20deg;
+    -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+#mov8 {
+    position: absolute;
+    left: 1200px;
+    top:800px;
+    outline: none;
+    clip-path: inset(1px);
+    pointer-events: none;
+    z-index:1;
+    rotate: -10deg;
+    -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+#mov9 {
+    position: absolute;
+    left: 1060px;
+    top: 810px;
+    outline: none;
+    clip-path: inset(1px);
+    pointer-events: none;
+    z-index:1;
+    rotate: -30deg;
+    -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+#mov10 {
+    position: absolute;
+    left: 1020px;
+    top: 680px;
+    outline: none;
+    clip-path: inset(1px);
+    pointer-events: none;
+    z-index:1;
+    rotate: -50deg;
+    -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
